@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@600&family=Share+Tech+Mono&display=swap');
+
+body {
+  margin: 0;
+  font-family: 'Share Tech Mono', monospace;
+  background: #ffffff;
+  color: #111111;
+  overflow: hidden;
+}
+
+#bgCanvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100vw;
+  height: 100vh;
+  background: #ffffff;
+}
+
+.intro {
+  height: 20vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.glow-title {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 3.2rem;
+  background: linear-gradient(45deg, #00B2FF, #8B00FF);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 0 10px rgba(139, 0, 255, 0.1), 0 0 20px rgba(0, 178, 255, 0.1);
+  animation: pulse 3s infinite;
+  margin-bottom: 0.5rem;
+}
+
+.glow-title span {
+  background: linear-gradient(45deg, #8B00FF, #00B2FF);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.subtext {
+  font-size: 1.2rem;
+  color: #444;
+  opacity: 0.85;
+  animation: fadeIn 2s ease-out forwards;
+}
+
+ul.menu {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 20px;
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 0 20px;
+  list-style: none;
+}
+
+.menu li a {
+  display: block;
+  background: rgba(0, 0, 0, 0.04);
+  border: 2px solid transparent;
+  border-image: linear-gradient(45deg, #00B2FF, #8B00FF);
+  border-image-slice: 1;
+  border-radius: 15px;
+  padding: 20px;
+  color: #111111;
+  text-align: center;
+  font-weight: bold;
+  font-size: 1rem;
+  text-decoration: none;
+  backdrop-filter: blur(4px);
+  transition: all 0.3s ease;
+}
+
+.menu li a:hover {
+  transform: scale(1.05);
+  background: linear-gradient(90deg, #00B2FF33, #8B00FF33);
+  color: #000;
+  box-shadow: 0 0 10px rgba(139, 0, 255, 0.3);
+}
+
+footer {
+  text-align: center;
+  font-size: 0.9rem;
+  color: #666;
+  margin: 50px 0 20px;
+  font-family: 'Share Tech Mono', monospace;
+}
+
+/* Animations */
+@keyframes pulse {
+  0% { text-shadow: 0 0 5px #ccc; }
+  50% { text-shadow: 0 0 15px #ddd; }
+  100% { text-shadow: 0 0 5px #ccc; }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
