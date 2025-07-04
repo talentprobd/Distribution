@@ -5,8 +5,11 @@ body {
   font-family: 'Share Tech Mono', monospace;
   background: #ffffff;
   color: #111111;
-  overflow: hidden;
+  overflow-x: hidden; /* Prevents horizontal scroll only */
+  overflow-y: auto;   /* Enables vertical scroll */
+  -webkit-overflow-scrolling: touch; /* Smooth scroll on iOS */
 }
+
 
 #bgCanvas {
   position: fixed;
@@ -15,8 +18,9 @@ body {
   z-index: -1;
   width: 100vw;
   height: 100vh;
-  background: #ffffff;
+  pointer-events: none; /* Prevents accidental blocking of scroll/tap */
 }
+
 
 .intro {
   height: 20vh;
