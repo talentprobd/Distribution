@@ -23,7 +23,8 @@ body {
 
 
 .intro {
-  height: 20vh;
+  min-height: 20vh;
+  padding: 20px 0;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -53,6 +54,24 @@ body {
   color: #444;
   opacity: 0.85;
   animation: fadeIn 2s ease-out forwards;
+}
+
+.site-button {
+  display: inline-block;
+  margin-top: 18px;
+  padding: 12px 28px;
+  border-radius: 30px;
+  background: linear-gradient(45deg, #00B2FF, #8B00FF);
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 1rem;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.site-button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 14px rgba(139, 0, 255, 0.4);
 }
 
 ul.menu {
